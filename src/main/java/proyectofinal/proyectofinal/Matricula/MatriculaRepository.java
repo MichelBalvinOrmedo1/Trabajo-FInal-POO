@@ -1,5 +1,7 @@
 package proyectofinal.proyectofinal.Matricula;
 
-public interface MatriculaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MatriculaRepository extends JpaRepository<MatriculaModel, Integer> {
 
 }
