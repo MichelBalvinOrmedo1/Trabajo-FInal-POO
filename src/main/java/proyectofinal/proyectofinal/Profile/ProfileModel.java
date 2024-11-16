@@ -27,7 +27,6 @@ import lombok.NoArgsConstructor;
 public class ProfileModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer dni;
 
     @Column(nullable = false)

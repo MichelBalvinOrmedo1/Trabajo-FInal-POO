@@ -1,4 +1,4 @@
-package proyectofinal.proyectofinal.Grado;
+package proyectofinal.proyectofinal.Curso;
 
 import org.springframework.validation.annotation.Validated;
 
@@ -13,8 +13,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Validated
-public class GradoRequest {
+public class CursoRequest {
 
     @NotBlank
-    private String nombreGrado;
+    private String nombre;
+
+    @NotBlank
+    private Integer idProfesor;
+
+    @NotBlank
+    private Integer idHorario;
+
+    @NotBlank
+    private Integer idCategoria;
+
+    @NotBlank
+    private Integer idNivel;
 }

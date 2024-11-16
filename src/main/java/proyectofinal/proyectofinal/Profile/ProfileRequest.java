@@ -6,6 +6,7 @@ import org.springframework.validation.annotation.Validated;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,6 +20,9 @@ import lombok.NoArgsConstructor;
 @Validated
 public class ProfileRequest {
 
+    @NotNull(message = "DNI is required")
+    private Integer dni;
+
     @NotBlank(message = "First name is required")
     @Size(min = 3, message = "First name must be at least 3 characters")
     private String firstName;
@@ -31,10 +35,6 @@ public class ProfileRequest {
     @Email(message = "Invalid email")
     private String email;
 
-    private String biografy;
-
     private UUID fileId;
-
-    private Integer dni;
 
 }

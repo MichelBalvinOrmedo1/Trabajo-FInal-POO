@@ -13,5 +13,8 @@ public class CursoDto {
 
     private Integer idCurso;
     private String nombre;
+    private Integer idProfesor;
+    private Integer idHorario;
     private Integer idCategoria;
+    private Integer idNivel;
 }

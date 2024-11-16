@@ -1,8 +1,8 @@
-package proyectofinal.proyectofinal.Grado;
+package proyectofinal.proyectofinal.Matricula.DetalleMatricula;
 
 import org.springframework.validation.annotation.Validated;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +13,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Validated
-public class GradoRequest {
+public class DetalleMatriculaRequest {
 
-    @NotBlank
-    private String nombreGrado;
+    @NotNull
+    private Integer idMatricula;
+
+    @NotNull
+    private Integer idCurso;
 }

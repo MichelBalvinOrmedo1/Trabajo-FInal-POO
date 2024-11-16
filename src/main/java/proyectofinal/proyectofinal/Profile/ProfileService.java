@@ -34,7 +34,7 @@ public class ProfileService {
     }
 
     public ProfileDTO getProfileById(Integer dni) {
-        ProfileModel profileModel = profileRepository.findProfileById(dni);
+        ProfileModel profileModel = profileRepository.findProfileByDni(dni);
 
         if (profileModel == null) {
             throw new ProfileNotFoundException("Profile not found ");
@@ -48,12 +48,8 @@ public class ProfileService {
 
     public ProfileDTO createProfile(ProfileRequest profileRequest, UUID userId) {
 
-        String biografy = profileRequest.getBiografy();
-        if (biografy == null) {
-            biografy = "";
-        }
-
         ProfileModel profileModel = ProfileModel.builder()
+                .dni(profileRequest.getDni())
                 .firstName(profileRequest.getFirstName())
                 .lastName(profileRequest.getLastName())
                 .email(profileRequest.getEmail())

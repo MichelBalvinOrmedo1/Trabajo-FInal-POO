@@ -27,7 +27,6 @@ import proyectofinal.proyectofinal.User.User;
 public class PersonaModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer dni;
 
     @Column(nullable = false)
