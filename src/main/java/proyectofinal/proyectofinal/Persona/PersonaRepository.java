@@ -7,4 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface PersonaRepository extends JpaRepository<PersonaModel, Integer> {
     // Obtener persona por tipoPersona es una lista
     List<PersonaModel> findByTipoPersona(String tipoPersona);
+
+    // Obtener persona por dni
+    PersonaModel findByDni(Integer dni);
+
 }

@@ -1,5 +1,8 @@
 package proyectofinal.proyectofinal.Categoria;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +24,15 @@ public class CategoriaService {
                 .idCategoria(categoriaModel.getIdCategoria())
                 .nombre(categoriaModel.getNombre())
                 .build();
+    }
+
+    public List<CategoriaDTO> findAll() {
+            return categoriaRepository.findAll().stream()
+                            .map(categoria -> CategoriaDTO.builder()
+                                            .idCategoria(categoria.getIdCategoria())
+                                            .nombre(categoria.getNombre())
+                                            .build())
+                            .collect(Collectors.toList());
     }
 
     public CategoriaDTO getCategoriaById(Integer idCategoria) {

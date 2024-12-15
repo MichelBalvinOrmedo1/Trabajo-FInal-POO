@@ -1,23 +1,14 @@
 USE sistemaMatricula;
 
-CREATE TABLE rol(
-    idRol INT AUTO_INCREMENT PRIMARY KEY,
-    nombreRol VARCHAR(15) NOT NULL
-);
 
-CREATE TABLE estado(
-    idEstado INT AUTO_INCREMENT PRIMARY KEY,
-    nombreEstado VARCHAR(15) NOT NULL
-);
 
 CREATE TABLE usuario(
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(15) NOT NULL,
     password VARCHAR(15) NOT NULL,
-    role INT,
-    estado INT,
-    FOREIGN KEY (role) REFERENCES rol (idRol),
-    FOREIGN KEY (estado) REFERENCES estado (idEstado)
+    role VARCHAR(15) NOT NULL,
+    estado VARCHAR(15) NOT NULL,
+    
 );
 
 CREATE TABLE file(

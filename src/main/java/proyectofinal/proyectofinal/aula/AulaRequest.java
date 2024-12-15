@@ -1,6 +1,4 @@
-package proyectofinal.proyectofinal.Horario;
-
-import java.util.Date;
+package proyectofinal.proyectofinal.aula;
 
 import org.springframework.validation.annotation.Validated;
 
@@ -15,18 +13,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Validated
-public class HorarioRequest {
+public class AulaRequest {
 
     @NotNull
-    private String dia;
+    private Integer cantActual;
 
     @NotNull
-    private Date horaInicio;
+    private Integer cantMaxima;
 
     @NotNull
-    private Date horaFin;
-
-    @NotNull
-    private Integer codAula;
+    private String estado;
 
 }

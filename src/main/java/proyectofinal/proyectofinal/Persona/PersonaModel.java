@@ -52,4 +52,5 @@ public class PersonaModel {
     private User user;
     @Column(name = "user_id", nullable = false)
     private UUID userId;
+
 }

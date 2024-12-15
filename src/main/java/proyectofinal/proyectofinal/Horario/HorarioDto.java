@@ -17,5 +17,6 @@ public class HorarioDto {
     private String dia;
     private Date horaInicio;
     private Date horaFin;
+    private Integer codAula;
 
 }

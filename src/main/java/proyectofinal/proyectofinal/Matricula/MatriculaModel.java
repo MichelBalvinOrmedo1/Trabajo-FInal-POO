@@ -44,4 +44,5 @@ public class MatriculaModel {
     @ManyToOne
     @JoinColumn(name = "idGrado", referencedColumnName = "idGrado")
     private GradoModel grado;
+
 }

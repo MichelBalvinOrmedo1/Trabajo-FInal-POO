@@ -14,7 +14,12 @@ public class CursoDto {
     private Integer idCurso;
     private String nombre;
     private Integer idProfesor;
+    private String nombreProfesor; // Nuevo campo
     private Integer idHorario;
+    private String nombreHorario; // Nuevo campo
     private Integer idCategoria;
+    private String nombreCategoria; // Nuevo campo
     private Integer idNivel;
+    private String nombreNivel; // Nuevo campo
+
 }
